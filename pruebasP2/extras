@@ -1,0 +1,12 @@
+·SQL ALCHEMY - conectar con sql
+·PyInstaller 
+·doctest     - hacer pruebas unitarias
+·KIVY        - generar aplicaciones con interfaz multiplataforma
+·TESSERACT   - pasar imagenes a texto
+·API REST    - conectarse
+·CODIGOS DE BARRAS
+    -EAN13
+        +GENERAR
+        +LEER
+            ~ BIBLIOTECA LEER
+            ~ OPENCV

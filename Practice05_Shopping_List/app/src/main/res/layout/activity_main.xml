@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    tools:context="com.adesfe.practice05_shopping_list.ui.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlPrecio"
+        android:layout_width="match_parent"
+        android:layout_height="143dp"
+        android:layout_above="@+id/rvTask"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="591dp"
+        android:layout_marginBottom="-3dp"
+        android:background="@color/teal_200"
+        android:elevation="10dp">
+
+        <TextView
+            android:id="@+id/tvTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="162dp"
+            android:layout_marginBottom="9dp"
+            android:text="Total Compra:"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tvPrecioFinal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="31dp"
+            android:layout_marginBottom="9dp"
+            android:text="0"
+            android:textSize="24sp" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTask"
+        android:layout_width="match_parent"
+        android:layout_height="605dp"
+        android:layout_below="@+id/rlCampos"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="11dp" />
+
+    <RelativeLayout
+        android:id="@+id/rlCampos"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:background="@android:color/white"
+        android:elevation="10dp">
+
+        <Button
+            android:id="@+id/btnAddProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="-1dp"
+            android:layout_marginBottom="-2dp"
+            android:backgroundTint="#FFAAAAAA"
+            android:text="Add"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:id="@+id/tvLista"
+            android:layout_width="186dp"
+            android:layout_height="62dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="Lista de la compra"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="51dp"
+            android:layout_height="33dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="160dp"
+            app:srcCompat="@drawable/kart" />
+
+        <EditText
+            android:id="@+id/etProducto"
+            android:layout_width="137dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="64dp"
+            android:ems="10"
+            android:hint="Producto"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/etCantidad"
+            android:layout_width="77dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="146dp"
+            android:layout_marginTop="64dp"
+            android:ems="10"
+            android:hint="1"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/etPrecio"
+            android:layout_width="73dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="98dp"
+            android:ems="10"
+            android:hint="1"
+            android:inputType="textPersonName" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

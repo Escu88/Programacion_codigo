@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- actions opening views on models -->
+    <!-- Acciones al abrir las vistas en los modelos 
+    https://www.odoo.com/documentation/14.0/developer/reference/addons/actions.html
+    -->
+
+    <record model="ir.actions.act_window" id="action_lista_clientes">
+      <!-- -->
+      <field name="name">Listado de clientes</field>
+      <field name="res_model">lista_clientes</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- actions -->
+    <menuitem name="Clientes" id="lista_clientes" parent="lista_empleados_root" action="action_lista_clientes"/>
+
+    <!-- explicit list view definition -->
+
+    <!-- Definimos como es la vista explicita de la lista-->
+    <record model="ir.ui.view" id="lista_clientes_tree">
+      <field name="name">Lista de lista_empleados</field>
+      <field name="model">lista_clientes</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="dni"/>
+          <field name="nombre"/>
+          <field name="apellido"/>
+          <field name="telefono"/>
+        </tree>
+      </field>
+    </record>
+
+        <!-- VISTA DE FORMULARIO -->
+    <record id="listado_clientes_form" model="ir.ui.view">
+        <field name="name">Lista de lista_empleados</field>
+        <field name="model">lista_clientes</field>
+        <field name="arch" type="xml">
+            <form>
+              <group>
+                <group>
+                  <field name="nombre"/>
+                </group>
+                <group>
+                  <field name="apellido"/>
+                </group>
+              </group>
+              <group>
+                <group>
+                  <field name="dni" />
+                </group>
+                <group>
+                  <field name="telefono"/>
+                </group>
+              </group>
+            </form>
+        </field>
+    </record>
+  </data>
+</odoo>

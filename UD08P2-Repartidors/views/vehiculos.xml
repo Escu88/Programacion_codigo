@@ -1,0 +1,61 @@
+<odoo>
+  <data>
+    <!-- actions opening views on models -->
+    <!-- Acciones al abrir las vistas en los modelos 
+    https://www.odoo.com/documentation/14.0/developer/reference/addons/actions.html
+    -->
+
+    <record model="ir.actions.act_window" id="action_lista_vehiculos">
+      <!-- -->
+      <field name="name">Listado de vehiculos</field>
+      <field name="res_model">lista_vehiculos</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- actions -->
+    <menuitem name="Vehiculos" id="lista_vehiculos" parent="lista_empleados_root" action="action_lista_vehiculos"/>
+
+    <!-- explicit list view definition -->
+
+    <!-- Definimos como es la vista explicita de la lista-->
+    <record model="ir.ui.view" id="lista_vehiculos_tree">
+      <field name="name">Lista de lista_empleados</field>
+      <field name="model">lista_vehiculos</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="tipo"/>
+          <field name="matricula"/>
+          <field name="foto"/>
+          <field name="descripcion"/>
+        </tree>
+      </field>
+    </record>
+
+        <!-- VISTA DE FORMULARIO -->
+    <record id="listado_vehiculos_form" model="ir.ui.view">
+        <field name="name">Lista de lista_empleados</field>
+        <field name="model">lista_vehiculos</field>
+        <field name="arch" type="xml">
+            <form>
+              <group>
+                <group>
+                  <field name="tipo"/>
+                </group>
+                <group>
+                  <field name="matricula"/>
+                </group>
+              </group>
+              <group>
+                <group>
+                  <field name="foto" widget="image" class="oe_avatar"/>
+                </group>
+                <group>
+                  <field name="descripcion"/>
+                </group>
+
+              </group>
+            </form>
+        </field>
+    </record>
+  </data>
+</odoo>

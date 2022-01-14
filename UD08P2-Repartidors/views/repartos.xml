@@ -1,0 +1,89 @@
+<odoo>
+  <data>
+    <!-- actions opening views on models -->
+    <!-- Acciones al abrir las vistas en los modelos 
+    https://www.odoo.com/documentation/14.0/developer/reference/addons/actions.html
+    -->
+
+    <record model="ir.actions.act_window" id="action_lista_repartos">
+      <!-- -->
+      <field name="name">Listado de repartos</field>
+      <field name="res_model">lista_clientes</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- actions -->
+    <menuitem name="Repartos" id="lista_repartos" parent="lista_empleados_root" action="action_lista_repartos"/>
+
+    <!-- explicit list view definition -->
+
+    <!-- Definimos como es la vista explicita de la lista-->
+    <record model="ir.ui.view" id="lista_repartos_tree">
+      <field name="name">Lista de lista_empleados</field>
+      <field name="model">lista_repartos</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="id"/>
+          <field name="fecha_inicio"/>
+          <field name="fecha_retorno"/>
+          <field name="fecha_recepcion"/>
+          <field name="repartidor"/>
+          <field name="vehiculo"/>
+          <field name="kilometros"/>
+          <field name="peso"/>
+          <field name="volumen"/>
+          <field name="observaciones"/>
+          <field name="estado_entrega"/>
+          <field name="emisor"/>
+          <field name="receptor"/>
+        </tree>
+      </field>
+    </record>
+
+        <!-- VISTA DE FORMULARIO -->
+    <record id="listado_repartos_form" model="ir.ui.view">
+        <field name="name">Lista de lista_empleados</field>
+        <field name="model">lista_clientes</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                  <field name="fecha_inicio"/>
+                </group>
+                <group>
+                  <field name="fecha_retorno"/>
+                </group>
+                <group>
+                  <field name="fecha_recepcion"/>
+                </group>
+                <group>
+                  <field name="repartidor"/>
+                </group>
+                <group>
+                  <field name="vehiculo"/>
+                </group>
+                <group>
+                  <field name="kilometros"/>
+                </group>
+                <group>
+                  <field name="peso"/>
+                </group>
+                <group>
+                  <field name="volumen"/>
+                </group>
+                <group>
+                  <field name="observaciones"/>
+                </group>
+                <group>
+                  <field name="estado_entrega"/>
+                </group>
+                <group>
+                  <field name="emisor"/>
+                </group>
+                <group>
+                  <field name="receptor"/>
+                </group>
+            </form>
+        </field>
+    </record>
+  </data>
+</odoo>

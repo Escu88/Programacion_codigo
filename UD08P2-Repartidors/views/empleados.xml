@@ -1,0 +1,75 @@
+<odoo>
+  <data>
+    <!-- actions opening views on models -->
+    <!-- Acciones al abrir las vistas en los modelos 
+    https://www.odoo.com/documentation/14.0/developer/reference/addons/actions.html
+    -->
+
+    <record model="ir.actions.act_window" id="action_lista_empleados">
+      <!-- -->
+      <field name="name">Listado de repartidores</field>
+      <field name="res_model">lista_empleados</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- Top menu item -->
+    <menuitem name="Listado de repartidores" id="lista_empleados_root"/>
+
+    <!-- actions -->
+    <menuitem name="Repartidores" id="lista_empleados" parent="lista_empleados_root" action="action_lista_empleados"/>
+
+    <!-- explicit list view definition -->
+
+    <!-- Definimos como es la vista explicita de la lista-->
+    <record model="ir.ui.view" id="lista_empleados_tree">
+      <field name="name">Lista de lista_empleados</field>
+      <field name="model">lista_empleados</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="dni"/>
+          <field name="nombre"/>
+          <field name="apellido"/>
+          <field name="telefono"/>
+          <field name="carnet"/>
+          <field name="foto"/>
+
+        </tree>
+      </field>
+    </record>
+
+        <!-- VISTA DE FORMULARIO -->
+    <record id="listado_repartidorees_form" model="ir.ui.view">
+        <field name="name">Lista de lista_empleados</field>
+        <field name="model">lista_empleados</field>
+        <field name="arch" type="xml">
+            <form>
+              <group>
+                <group>
+                  <field name="nombre"/>
+                </group>
+                <group>
+                  <field name="apellido"/>
+                </group>
+              </group>
+              <group>
+                <group>
+                  <field name="dni" />
+                </group>
+                <group>
+                  <field name="telefono"/>
+                </group>
+              </group>
+              <group>
+                <group>
+                  <field name="carnet"/>
+                </group>
+                <group>
+                  <field name="foto" widget="image" class="oe_avatar"/>
+                </group>
+              </group>
+            </form>
+        </field>
+    </record>
+  </data>
+</odoo>

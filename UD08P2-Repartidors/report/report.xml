@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!--  Ejemplo de informe asociado a equipo (se genera al darle a imprimir 
+        desde la vista Form de un empleado)  -->
+<template id="report_pendientes_view">
+<!--  Aqui la estructura a seguir  -->
+<t t-call="web.html_container">
+<t t-foreach="docs" t-as="doc">
+<t t-call="web.internal_layout" >
+<div class="page">
+<!--  Cabecera  -->
+<h2> Pedidos Pendientes</h2>
+<!--  Datos del Repartidor y del Pedido  -->
+<p>
+Documento de Identificacion:
+<span t-field="doc.dni"/>
+</p>
+<p>
+Nombre:
+<span t-field="doc.nombre"/>
+</p>
+<p>
+Apellidos:
+<span t-field="doc.apellido"/>
+</p>
+<p>
+Pedidos Pendientes de Salida:
+<span t-field="doc.reparto"/>
+</p>
+</div>
+</t>
+</t>
+</t>
+</template>
+<!--  Realmente, este es el informe, lo de arriba es la plantilla que utilizara el informe  -->
+<report id="report_pedidos_pendientes" model="empleados" string="Pedidos Pendientes de Salida" name="EJ2_Empresa_Repartidors.report_pendientes_view" file="EJ2_Empresa_Repartidors.report_pedidos_pendientes_view" report_type="qweb-pdf"/>
+</odoo>

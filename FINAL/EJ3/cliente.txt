@@ -1,0 +1,22 @@
+Cliente: Adrian | Fecha de inicio de la conexion: Tue Jan 25 18:59:20 CET 2022
+Duracion de la conexión: 0 dias 0 horas 0 minutos 6 segundos.
+Cliente: Adrian | Fecha de inicio de la conexion: Tue Jan 25 19:39:10 CET 2022
+Duracion de la conexión: 0 dias 0 horas 0 minutos 11 segundos.
+Cliente: Adrian | Fecha de inicio de la conexion: Tue Jan 25 19:39:24 CET 2022
+Duracion de la conexión: 0 dias 0 horas 0 minutos 10 segundos.
+Cliente: Adrian | Fecha de inicio de la conexion: Wed Jan 26 15:12:59 CET 2022
+Duracion de la conexión: 0 dias 0 horas 0 minutos 11 segundos.
+
+Cliente: Adrian | Fecha de inicio de la conexion: Wed Jan 26 15:25:18 CET 2022
+Duracion de la conexión: 0 dias 0 horas 0 minutos 12 segundos.
+
+Cliente: Adrian | Fecha de inicio de la conexion: Wed Jan 26 15:25:32 CET 2022
+Duracion de la conexión: 0 dias 0 horas 0 minutos 8 segundos.
+
+Cliente: Adrian | Fecha de inicio de la conexion: Wed Jan 26 15:25:44 CET 2022
+Duracion de la conexión: 0 dias 0 horas 0 minutos 10 segundos.
+
+Cliente: Adrian | Fecha de inicio de la conexion: Wed Jan 26 15:37:13 CET 2022
+Duracion de la conexión: 0 dias 0 horas 0 minutos 9 segundos.
+Cliente: Adrian | Fecha de inicio de la conexion: Wed Jan 26 15:37:24 CET 2022
+Duracion de la conexión: 0 dias 0 horas 0 minutos 6 segundos.
